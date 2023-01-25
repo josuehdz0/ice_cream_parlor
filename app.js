@@ -10,7 +10,7 @@ const iceCream = [{
   name: 'Strawberry',
   image: 'https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg',
   price: 2
-}],
+}]
 
 const toppings = [{
   name: 'Sprinkles',
@@ -20,7 +20,7 @@ const toppings = [{
   name: 'Chocolate Chips',
   image: 'https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360',
   price: 2
-}],
+}]
 
 const containers = [{
   name: 'Waffle Cone',
@@ -31,3 +31,33 @@ const containers = [{
   image: 'http://images.wbmason.com/350/L_JOY66050.jpg',
   price: 4
 }]
+
+function drawToppings(){
+
+}
+
+function drawContainers(){
+
+}
+
+
+function drawIceCream(){
+
+}
+
+function addItemToCart(name){
+
+}
+
+function drawCart(){
+
+}
+
+function calculateCartTotal(){
+
+}
+
+function pay(){
+  // cannot pay unless has object from each array category
+}
+
