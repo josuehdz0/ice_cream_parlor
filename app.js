@@ -1,4 +1,4 @@
-const iceCream = [{
+const iceCreams = [{
   name: 'Cookie Dough',
   image: 'https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg',
   price: 1
@@ -43,7 +43,7 @@ function drawToppings(){
       <img src="${topping.image}" alt="${topping.name}">
       <div class="card-body">
         <div class="d-flex justify-content-center align-items-center">
-          <p> <b>${topping.name}</b>$${topping.price}</p>
+          <p> <b>${topping.name}</b> $${topping.price}</p>
         </div>
         <button class="btn ntn-outline-secondary" title="Add to Cart">
           <i class="mdi mdi-cart"></i>
@@ -69,7 +69,7 @@ function drawContainers(){
       <img src="${vessel.image}" alt="${vessel.name}">
       <div class="card-body">
         <div class="d-flex justify-content-center align-items-center">
-          <p> <b>${vessel.name}</b>$${vessel.price}</p>
+          <p> <b>${vessel.name}</b> $${vessel.price}</p>
         </div>
         <button class="btn ntn-outline-secondary" title="Add to Cart">
           <i class="mdi mdi-cart"></i>
@@ -87,6 +87,31 @@ containersElem.innerHTML = template
 
 
 function drawIceCream(){
+
+  let iceCreamElem = document.getElementById('icecream-cards')
+  let template = ''
+  iceCreams.forEach(icecream => {
+    template += `
+    <div class="col-4">
+    <div class="card">
+      <img src="${icecream.image}" alt="${icecream.name}">
+      <div class="card-body">
+        <div class="d-flex justify-content-center align-items-center">
+          <p> <b>${icecream.name}</b> $${icecream.price}</p>
+        </div>
+        <button class="btn ntn-outline-secondary" title="Add to Cart">
+          <i class="mdi mdi-cart"></i>
+          <small>ADD</small>
+        </button>
+      </div>
+    </div>
+  </div>
+    `
+    
+  })
+  
+iceCreamElem.innerHTML = template
+  
 
 }
 
@@ -108,3 +133,4 @@ function pay(){
 
 drawContainers()
 drawToppings()
+drawIceCream()
