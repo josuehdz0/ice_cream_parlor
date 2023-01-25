@@ -33,14 +33,31 @@ const containers = [{
 }]
 
 function drawToppings(){
-  let toppingsElem = document.getElementById('toppings-cards')
+  let toppingsElem = document.getElementById('topping-cards')
   let template = ''
   for (let i = 0; i < toppings.length; i++) {
     const topping = toppings[i];
-    template += `test`
-    
+    template += `
+    <div class="col-4">
+    <div class="card">
+      <img src="${topping.image}" alt="${topping.name}">
+      <div class="card-body">
+        <div class="d-flex justify-content-center align-items-center">
+          <p> <b>${topping.name}</b>$${topping.price}</p>
+        </div>
+        <button class="btn ntn-outline-secondary" title="Add to Cart">
+          <i class="mdi mdi-cart"></i>
+          <small>ADD</small>
+        </button>
+      </div>
+    </div>
+  </div>
+    `
   }
 
+
+  toppingsElem.innerHTML = template
+  
 }
 
 function drawContainers(){
@@ -68,3 +85,4 @@ function pay(){
   // cannot pay unless has object from each array category
 }
 
+drawToppings()
