@@ -33,6 +33,13 @@ const containers = [{
 }]
 
 function drawToppings(){
+  let toppingsElem = document.getElementById('toppings-cards')
+  let template = ''
+  for (let i = 0; i < toppings.length; i++) {
+    const topping = toppings[i];
+    template += `test`
+    
+  }
 
 }
 

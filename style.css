@@ -1,0 +1,27 @@
+:root{
+  --header: #efcfe3;
+  
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #b3dee2;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.cart{
+  min-height: 100vh;
+}
+
+.cuteheader{
+  background-color: var(--header);
+  color: aliceblue;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.233);
+}
+

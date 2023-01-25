@@ -15,13 +15,76 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
     integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
+
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
   <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
-  <footer></footer>
+<body class="debug">
+  <header class="align-items-center py-3 cuteheader">
+    <nav class="display-5 text-center">
+      <div> ONLINE ORDER YOUR ICE CREAM</div>
+    </nav>
+
+
+  </header>
 
   <main>
+    <div class="container">
+      <div class="row my-4">
+        <div class="col-7">
+          <div class="row toppings-cards" id="topping-cards">
+            <!-- this will be were template for toppings starts -->
+            <div class="col-4">
+              <div class="card">
+                <img src="//via.placeholder.com/150" alt="">
+                <div class="card-body">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <p> <b>Topping name</b> $5</p>
+                  </div>
+                  <!-- <button class="btn ntn-outline-secondary" title="Add to Cart">
+                    <i class="mdi mdi-cart"></i>
+                    <small>ADD</small>
+                  </button> -->
+                </div>
+              </div>
+            </div>
+            <!-- toppings template ends here -->
+          </div>
+          <div class="row">
+            <!-- this will be were template for vessels starts -->
+            <div> vessels</div>
+            <!-- vessels template ends here -->
+          </div>
+          <div class="row">
+            <!-- this will be were template for Ice Cream starts -->
+            <div> Ice Cream</div>
+            <!-- Ice Cream template ends here -->
+          </div>
+
+
+        </div>
+        <div class="col-5">
+          <div>cart</div>
+        </div>
+      </div>
+    </div>
 
 
   </main>
