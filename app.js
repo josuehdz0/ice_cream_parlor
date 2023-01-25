@@ -57,11 +57,32 @@ function drawToppings(){
 
 
   toppingsElem.innerHTML = template
-  
 }
 
 function drawContainers(){
-
+  let containersElem = document.getElementById('vessel-cards')
+  let template = ''
+  containers.forEach(vessel => {
+    template += `
+    <div class="col-4">
+    <div class="card">
+      <img src="${vessel.image}" alt="${vessel.name}">
+      <div class="card-body">
+        <div class="d-flex justify-content-center align-items-center">
+          <p> <b>${vessel.name}</b>$${vessel.price}</p>
+        </div>
+        <button class="btn ntn-outline-secondary" title="Add to Cart">
+          <i class="mdi mdi-cart"></i>
+          <small>ADD</small>
+        </button>
+      </div>
+    </div>
+  </div>
+    `
+    
+  })
+  
+containersElem.innerHTML = template
 }
 
 
@@ -85,4 +106,5 @@ function pay(){
   // cannot pay unless has object from each array category
 }
 
+drawContainers()
 drawToppings()
