@@ -32,6 +32,8 @@ const containers = [{
   price: 4
 }]
 
+let cart =[]
+
 function drawToppings(){
   let toppingsElem = document.getElementById('topping-cards')
   let template = ''
@@ -115,13 +117,44 @@ iceCreamElem.innerHTML = template
 
 }
 
-function addItemToCart(name){
+// function addItemToCart(name){
 
-}
+//   let itemToAdd = iceCreams.find(p=>p.name==name)
+//   let itemToAdd = containers.find(p=>p.name==name)
+//   let itemToAdd = toppings.find(p=>p.name==name)
 
-function drawCart(){
+//   let productFoundInCart = cart.find(p => p.name ==name)
 
-}
+//   if(productFoundInCart){
+//     productFoundInCart++
+//   }else {
+//     cart.push({
+//       name:itemToAdd.name,
+//       price: itemToAdd.price,
+//     })
+//   }
+
+// drawCart()
+
+// }
+
+// function drawCart(){
+
+//   let cartElem = document.getElementById('cart')
+//   let cartTotal = document.getElementById('cart-total')
+//   let template = ''
+
+//   cartElem.forEach(item =>{
+//     template =+`
+//               <div class="col-6">${item.name}</div>
+//               <div class="col-2">3</div>
+//               <div class="col-2">$4</div>
+//               <div class="col-2">$12</div>
+    
+//     `
+//   })
+
+// }
 
 function calculateCartTotal(){
 
