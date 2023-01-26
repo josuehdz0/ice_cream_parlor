@@ -156,14 +156,19 @@ function drawCart(){
     `
   })
 
-  // let total = calculateCartTotal()
+  let total = calculateCartTotal()
 
   cartElem.innerHTML = template
-  // cartTotalElem.innerHTML = total.toFixed(2)
+  cartTotalElem.innerHTML = total.toFixed(2)
 }
 
 function calculateCartTotal(){
+  let total = 0
+  cart.forEach(p => {
+    total += p.price * p.quantity
+  })
 
+  return total
 }
 
 function pay(){
