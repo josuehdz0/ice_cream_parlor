@@ -172,7 +172,9 @@ function calculateCartTotal(){
 }
 
 function pay(){
-  // cannot pay unless has object from each array category
+  // cannot pay unless has object from each array category (for later)
+  cart=[]
+  drawCart()
 }
 
 drawContainers()
