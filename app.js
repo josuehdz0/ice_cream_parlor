@@ -47,7 +47,7 @@ function drawToppings(){
         <div class="d-flex justify-content-center align-items-center">
           <p> <b>${topping.name}</b> $${topping.price}</p>
         </div>
-        <button class="btn ntn-outline-secondary" title="Add to Cart">
+        <button class="btn ntn-outline-secondary" title="Add to Cart" onclick="addItemToCart('${topping.name}')">
           <i class="mdi mdi-cart"></i>
           <small>ADD</small>
         </button>
@@ -73,7 +73,7 @@ function drawContainers(){
         <div class="d-flex justify-content-center align-items-center">
           <p> <b>${vessel.name}</b> $${vessel.price}</p>
         </div>
-        <button class="btn ntn-outline-secondary" title="Add to Cart">
+        <button class="btn ntn-outline-secondary" title="Add to Cart" onclick="addItemToCart('${vessel.name}')">
           <i class="mdi mdi-cart"></i>
           <small>ADD</small>
         </button>
