@@ -97,7 +97,7 @@ function drawIceCream(){
     <div class="col-4">
     <div class="card">
       <img src="${icecream.image}" alt="${icecream.name}">
-      <div class="card-body">
+      <div class="card-body ">
         <div class="d-flex justify-content-center align-items-center">
           <p> <b>${icecream.name}</b> $${icecream.price}</p>
         </div>
