@@ -101,7 +101,7 @@ function drawIceCream(){
         <div class="d-flex justify-content-center align-items-center">
           <p> <b>${icecream.name}</b> $${icecream.price}</p>
         </div>
-        <button class="btn ntn-outline-secondary" title="Add to Cart">
+        <button class="btn ntn-outline-secondary" title="Add to Cart"  onclick="addItemToCart('${icecream.name}')" >
           <i class="mdi mdi-cart"></i>
           <small>ADD</small>
         </button>
@@ -117,44 +117,50 @@ iceCreamElem.innerHTML = template
 
 }
 
-// function addItemToCart(name){
+function addItemToCart(name){
 
-//   let itemToAdd = iceCreams.find(p=>p.name==name)
-//   let itemToAdd = containers.find(p=>p.name==name)
-//   let itemToAdd = toppings.find(p=>p.name==name)
+  let itemToAdd = iceCreams.find(p=>p.name==name)
+  || containers.find(p=>p.name==name)
+  || toppings.find(p=>p.name==name)
 
-//   let productFoundInCart = cart.find(p => p.name ==name)
+  let productFoundInCart = cart.find(p => p.name ==name)
 
-//   if(productFoundInCart){
-//     productFoundInCart++
-//   }else {
-//     cart.push({
-//       name:itemToAdd.name,
-//       price: itemToAdd.price,
-//     })
-//   }
-
-// drawCart()
-
-// }
-
-// function drawCart(){
-
-//   let cartElem = document.getElementById('cart')
-//   let cartTotal = document.getElementById('cart-total')
-//   let template = ''
-
-//   cartElem.forEach(item =>{
-//     template =+`
-//               <div class="col-6">${item.name}</div>
-//               <div class="col-2">3</div>
-//               <div class="col-2">$4</div>
-//               <div class="col-2">$12</div>
+  if(productFoundInCart){
+    productFoundInCart.quantity++
+  }else {
+    cart.push({
+      name:itemToAdd.name,
+      price: itemToAdd.price,
+      quantity:1 
     
-//     `
-//   })
+    })
+  }
 
-// }
+drawCart()
+
+}
+
+function drawCart(){
+
+  let cartElem = document.getElementById('cart')
+  let cartTotalElem = document.getElementById('cart-total')
+  let template = ''
+
+  cart.forEach(item =>{
+    template +=`
+              <div class="col-6">${item.name}</div>
+              <div class="col-2">${item.quantity}</div>
+              <div class="col-2">$${item.price}</div>
+              <div class="col-2">$${item.price * item.quantity}</div>
+    
+    `
+  })
+
+  // let total = calculateCartTotal()
+
+  cartElem.innerHTML = template
+  // cartTotalElem.innerHTML = total.toFixed(2)
+}
 
 function calculateCartTotal(){
 
